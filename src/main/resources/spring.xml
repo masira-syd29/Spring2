@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- <bean id="maseera" class="com.example.Alien1" scope="prototype"> -->
+
+    <!-- <constructor-arg type="com.example.Alien1" ref="21"/> -->
+
+    <!-- <constructor-arg type="int" value="21"/> -->
+    <!-- <constructor-arg type="com.example.Alien1" ref="21"/> -->
+
+    <!-- bean definitions here -->
+    <bean id="maseera" class="com.example.Alien1" autowire="byType">
+        <property name="age" value="21"/>
+        <property name="comp">
+            <bean id="comp1" class="com.example.Laptop" primary="true">
+            </bean>
+        </property>
+<!--        <constructor-arg name="lap" ref="lap1"/>-->
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="lap" ref="lap1"/>-->
+
+    </bean>
+
+
+
+<!--    <bean class="com.example.Desktop" lazy-init="true">-->
+<!--    </bean>-->
+
+</beans>
